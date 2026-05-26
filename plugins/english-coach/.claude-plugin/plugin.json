@@ -1,0 +1,10 @@
+{
+  "name": "english-coach",
+  "description": "Analyzes English in your prompts and surfaces mistakes/better phrasings via macOS notification + log file. Designed for non-native speakers practicing English.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Jose Morcuende",
+    "email": "josemorcuende@wetaca.com"
+  },
+  "keywords": ["english", "language", "coach", "esl", "feedback"]
+}

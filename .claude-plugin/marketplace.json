@@ -38,6 +38,12 @@
         "repo": "anthropics/claude-plugins-official",
         "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance"
       }
+    },
+    {
+      "name": "english-coach",
+      "description": "Analyzes English in your prompts (>15 words) and surfaces mistakes/better phrasings via macOS notification + log file (~/.claude/english-coach.log). Out-of-band, never pollutes context.",
+      "source": "./plugins/english-coach",
+      "version": "0.1.0"
     }
   ]
 }

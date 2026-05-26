@@ -1,0 +1,15 @@
+{
+  "description": "English-coach hook: analyzes user prompts >15 words for English mistakes, surfaces feedback via notification + log.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/english_coach.sh\""
+          }
+        ]
+      }
+    ]
+  }
+}
