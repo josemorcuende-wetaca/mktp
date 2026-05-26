@@ -1,0 +1,43 @@
+{
+  "name": "marketpalce",
+  "owner": {
+    "name": "Jose Morcuende",
+    "email": "josemorcuende@wetaca.com"
+  },
+  "metadata": {
+    "description": "Personal Claude Code plugin marketplace.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "forge-profiles",
+      "description": "Plugin profile manager — switch between sets of active plugins per work mode. Curated from dmedina-dev/dev-forge.",
+      "source": "./plugins/forge-profiles",
+      "version": "1.1.2",
+      "upstream": {
+        "repo": "dmedina-dev/dev-forge",
+        "url": "https://github.com/dmedina-dev/dev-forge/tree/main/plugins/forge-profiles"
+      }
+    },
+    {
+      "name": "frontend-design",
+      "description": "Frontend design skill for UI/UX implementation. Curated from anthropics/claude-plugins-official.",
+      "source": "./plugins/frontend-design",
+      "version": "0.1.0",
+      "upstream": {
+        "repo": "anthropics/claude-plugins-official",
+        "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/frontend-design"
+      }
+    },
+    {
+      "name": "security-guidance",
+      "description": "Security reminder hook that warns about potential issues (command injection, XSS, unsafe patterns) when editing files. Curated from anthropics/claude-plugins-official.",
+      "source": "./plugins/security-guidance",
+      "version": "0.1.0",
+      "upstream": {
+        "repo": "anthropics/claude-plugins-official",
+        "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance"
+      }
+    }
+  ]
+}
