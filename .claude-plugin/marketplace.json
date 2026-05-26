@@ -40,6 +40,16 @@
       }
     },
     {
+      "name": "forge-keeper",
+      "description": "Keeps CLAUDE.md, project docs and memories in sync across sessions. Includes /update-check to pull upstream plugin updates. Curated from dmedina-dev/dev-forge for local customization.",
+      "source": "./plugins/forge-keeper",
+      "version": "1.4.1",
+      "upstream": {
+        "repo": "dmedina-dev/dev-forge",
+        "url": "https://github.com/dmedina-dev/dev-forge/tree/main/plugins/forge-keeper"
+      }
+    },
+    {
       "name": "english-coach",
       "description": "Analyzes English in your prompts (>15 words) and surfaces mistakes/better phrasings via macOS notification + log file (~/.claude/english-coach.log). Out-of-band, never pollutes context.",
       "source": "./plugins/english-coach",
