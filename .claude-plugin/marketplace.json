@@ -53,7 +53,7 @@
       "name": "english-coach",
       "description": "Analyzes English in your prompts (>15 words) and surfaces mistakes/better phrasings via macOS notification + log file (~/.claude/english-coach.log). Out-of-band, never pollutes context.",
       "source": "./plugins/english-coach",
-      "version": "0.1.1"
+      "version": "0.1.2"
     }
   ]
 }

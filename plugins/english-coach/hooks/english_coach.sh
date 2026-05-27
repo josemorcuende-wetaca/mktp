@@ -64,12 +64,17 @@ touch "$LOCK"
   # Cost/scope limits on the analyzer:
   #   --model haiku   ~10x cheaper, plenty for grammar checks
   #   --tools ""      analyzer doesn't need tools — purely text-out
-  feedback=$(ENGLISH_COACH_RUNNING=1 claude -p \
-    --model haiku \
-    --tools "" \
-    "[$ANALYZER_MARKER] You are an English coach. The user is a Spanish native speaker. Analyze the following text for English mistakes or better phrasings. Respond in ONE short line (max 100 chars). If the English is fine, respond exactly with: OK
+  #
+  # The prompt is fed via stdin, NOT as a positional arg: `--tools <tools...>`
+  # is variadic, so a trailing positional prompt gets swallowed as a "tool
+  # name" and claude errors with "Input must be provided...". stdin is
+  # immune to that arg-parsing greediness.
+  analyzer_prompt="[$ANALYZER_MARKER] You are an English coach. The user is a Spanish native speaker. Analyze the following text for English mistakes or better phrasings. Respond in ONE short line (max 100 chars). If the English is fine, respond exactly with: OK
 
-Text: $prompt" 2>/dev/null || echo "")
+Text: $prompt"
+  feedback=$(printf '%s' "$analyzer_prompt" | ENGLISH_COACH_RUNNING=1 claude -p \
+    --model haiku \
+    --tools "" 2>/dev/null || echo "")
 
   feedback=$(printf '%s' "$feedback" | head -c 200 | tr -d '\n')
 
